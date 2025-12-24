@@ -1,0 +1,6 @@
+# Session-specific files (vary per project)
+claude-progress.txt
+
+# OS files
+.DS_Store
+Thumbs.db
