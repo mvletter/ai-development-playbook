@@ -10,7 +10,6 @@ A structured approach to building software with AI assistance.
 ai-development-playbook/
 ├── version                  # Current playbook version
 ├── changelog.md             # What's new in each version
-├── ai-workflow-spec.md      # Philosophy and workflow
 ├── CLAUDE.md                # Always-loaded context
 ├── claude-progress.txt      # Cross-session progress tracking
 ├── project.md               # Feature index

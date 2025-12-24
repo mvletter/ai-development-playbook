@@ -9,6 +9,23 @@ Formaat: [Semantic Versioning](https://semver.org/)
 
 ---
 
+## [1.1.0] - 2024-12-24
+
+### Nieuwe feature: system.md
+
+Centrale documentatie voor "wat bouwen we eigenlijk?" - een holistische beschrijving van het project die groeit met elke afgeronde feature.
+
+**Bevat:**
+- `docs/system.md` template met 4 secties: What is, The problem, Who it's for, What it does
+- `/setup` vult eerste 3 secties automatisch in vanuit Discovery output
+- `/complete` voegt features toe aan "What it does" sectie
+
+**Wat te doen:**
+1. Kopieer `docs/system.md` naar je project
+2. Vul in na Discovery fase (of laat /setup het doen)
+
+---
+
 ## [1.0.0] - 2024-12-24
 
 ### Eerste release
