@@ -6,8 +6,8 @@ Check for updates to the AI Development Playbook and show what's new.
 
 ### Step 1: Read local version
 
-Read the `version` file in the project root.
-- If not found: assume version 0.0.0 (never updated)
+Read the `.playbook-version` file in the project root.
+- If not found: assume version 0.0.0 (playbook copied before versioning existed)
 - Store as `local_version`
 
 ### Step 2: Fetch latest from GitHub
@@ -54,22 +54,22 @@ De changelog hierboven beschrijft wat er nieuw is en hoe je het kunt toepassen.
 
 Lees de "Wat te doen" secties en pas toe wat relevant is voor jouw project.
 
-Als je klaar bent, update ik je version file zodat je deze melding
+Als je klaar bent, update ik je .playbook-version file zodat je deze melding
 niet opnieuw krijgt.
 
 Klaar met reviewen? (j/n)
 ```
 
 If yes:
-1. Update the local `version` file to `remote_version`
-2. Confirm: "✓ version bijgewerkt naar [remote_version]"
+1. Update the local `.playbook-version` file to `remote_version`
+2. Confirm: "✓ .playbook-version bijgewerkt naar [remote_version]"
 
 If no:
 - "Geen probleem. Run `/playbook-update` wanneer je klaar bent om te reviewen."
 
 ## Important
 
-- NEVER automatically change any file except version
+- NEVER automatically change any file except .playbook-version
 - NEVER try to merge or diff project files
 - The changelog contains human-readable instructions
 - User decides what to apply to their project

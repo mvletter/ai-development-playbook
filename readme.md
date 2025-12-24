@@ -4,52 +4,67 @@ A structured approach to building software with AI assistance.
 
 **What is this?** A set of instructions and templates that help you and an AI assistant (like Claude) work together to build software - from initial idea to finished product.
 
-## Structure
+## Getting the template
+
+### Option 1: Download ZIP (simplest)
+
+1. Go to [Releases](https://github.com/mvletter/ai-development-playbook/releases)
+2. Download the latest `template.zip`
+3. Extract to your project folder
+
+### Option 2: Git sparse checkout (for git users)
+
+Only clone the `template/` folder:
+
+```bash
+git clone --filter=blob:none --sparse https://github.com/mvletter/ai-development-playbook.git
+cd ai-development-playbook
+git sparse-checkout set template
+cp -r template/* /path/to/your/project/
+```
+
+### Option 3: Full clone + copy
+
+```bash
+git clone https://github.com/mvletter/ai-development-playbook.git
+cp -r ai-development-playbook/template/* /path/to/your/project/
+```
+
+## Repository structure
 
 ```
 ai-development-playbook/
+├── readme.md                # This file (about the playbook)
 ├── version                  # Current playbook version
 ├── changelog.md             # What's new in each version
-├── CLAUDE.md                # Always-loaded context
-├── claude-progress.txt      # Cross-session progress tracking
-├── project.md               # Feature index
 │
-├── prompts/                 # Pre-project architecture discovery
-│   ├── discovery.md         # Phase 1: Understand the problem
-│   ├── architecture-pattern.md  # Phase 2: Choose structure
-│   ├── tech-stack.md        # Phase 3: Pick technologies
-│   └── validator.md         # Phase 4: Stress-test decisions
-│
-├── .claude/
-│   ├── commands/            # Slash commands
-│   │   ├── setup.md         # Run prompts → initialize project
-│   │   ├── research.md
-│   │   ├── plan.md
-│   │   ├── implement.md
-│   │   ├── wrap.md          # Session-end analysis → inbox.md
-│   │   ├── retro.md         # Bug analysis → pitfalls.md
-│   │   ├── complete.md      # Cleanup + refactor + review + docs
-│   │   ├── cleanup.md
-│   │   ├── refactor.md
-│   │   ├── security.md
-│   │   └── evolve.md        # Analyze and improve agents
-│   └── agents/              # Subagents
-│       ├── code-reviewer.md     # Check code vs pitfalls/patterns
-│       ├── doc-sync-checker.md  # Verify docs match code
-│       ├── debugger.md          # Bug analysis and root cause tracing
-│       └── performance-optimizer.md  # Bottleneck identification
-│
-└── docs/
-    ├── system.md            # What it is, problem, users, capabilities
-    ├── architecture.md
-    ├── database.md
-    ├── decisions.md
-    ├── inbox.md             # Unprocessed bugs & ideas
-    ├── pitfalls.md          # Single file → splits when large
-    ├── patterns.md          # Single file → splits when large
-    └── features/            # [name].md for features, [type]-[date].md for maintenance
-        ├── _template.md
-        └── done/
+└── template/                # ← COPY THIS TO YOUR PROJECT
+    ├── .playbook-version    # Tracks which version you copied
+    ├── CLAUDE.md            # Always-loaded context
+    ├── claude-progress.txt  # Cross-session progress tracking
+    ├── project.md           # Feature index
+    │
+    ├── prompts/             # Pre-project architecture discovery
+    │   ├── discovery.md
+    │   ├── architecture-pattern.md
+    │   ├── tech-stack.md
+    │   └── validator.md
+    │
+    ├── .claude/
+    │   ├── commands/        # Slash commands (/setup, /plan, /implement, etc.)
+    │   └── agents/          # Subagents (debugger, code-reviewer, etc.)
+    │
+    └── docs/
+        ├── system.md        # What it is, problem, users, capabilities
+        ├── architecture.md
+        ├── database.md
+        ├── decisions.md
+        ├── inbox.md         # Unprocessed bugs & ideas
+        ├── pitfalls.md
+        ├── patterns.md
+        └── features/
+            ├── _template.md
+            └── done/
 ```
 
 ## New project setup
@@ -83,8 +98,7 @@ Each phase produces a document that feeds the next.
 
 ### After setup
 
-1. Copy templates to your project
-2. Fill in project-specific content in `CLAUDE.md` (from /setup output)
+Fill in project-specific content in `CLAUDE.md` (from /setup output)
 
 ## Workflow phases
 
@@ -158,7 +172,7 @@ The playbook evolves as we learn. To check for updates:
 ```
 
 This will:
-1. Check if there's a newer version
+1. Check if there's a newer version (compares your `.playbook-version` with latest)
 2. Show what's changed (in plain language)
 3. Give you instructions on how to apply relevant updates
 

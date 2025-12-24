@@ -9,6 +9,26 @@ Formaat: [Semantic Versioning](https://semver.org/)
 
 ---
 
+## [2.0.0] - 2024-12-24
+
+### Breaking change: template/ folder structuur
+
+Alle project-bestanden zitten nu in een `template/` folder. Dit voorkomt verwarring tussen playbook-meta (readme, version, changelog) en project-bestanden (CLAUDE.md, docs/, etc.).
+
+**Wat verandert:**
+- `version` → `template/.playbook-version` (hernoemt om verwarring te voorkomen)
+- Alle project-bestanden verplaatst naar `template/`
+- `/playbook-update` leest nu `.playbook-version` in plaats van `version`
+
+**Wat te doen voor bestaande projecten:**
+1. Hernoem `version` naar `.playbook-version` in je project root
+2. Klaar! Verder niets nodig.
+
+**Wat te doen voor nieuwe projecten:**
+- Kopieer alleen de `template/` folder naar je project
+
+---
+
 ## [1.1.0] - 2024-12-24
 
 ### Nieuwe feature: system.md
