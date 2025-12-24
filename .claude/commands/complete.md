@@ -229,25 +229,30 @@ If you notice a gap (something an agent SHOULD have caught but didn't):
 
 Complete the "After completion" checklist:
 
-1. **Capture technical learnings:**
+1. **Update system.md:**
+   - Add feature to "What it does" section in docs/system.md
+   - Format: `- [Feature name] - [what it enables in plain language]`
+   - Keep entries concise (one line each)
+
+2. **Capture technical learnings:**
    - Add new patterns to docs/patterns.md (with category-prefixed anchors)
    - Add new pitfalls to docs/pitfalls.md (with category-prefixed anchors)
    - Update docs/architecture.md if structure changed
    - Update docs/database.md if schema changed
 
-2. **Add AI-CONTEXT comments:**
+4. **Add AI-CONTEXT comments:**
    In the code, add comments pointing to new docs entries:
    ```
    // AI-CONTEXT: See docs/pitfalls.md#[category]-[name]
    // AI-CONTEXT: See docs/patterns.md#[category]-[name]
    ```
 
-3. **Move feature spec:**
+5. **Move feature spec:**
    - Update Status in feature spec to: Done
    - Move docs/features/$ARGUMENTS.md to docs/features/done/
    - Keep filename the same
 
-4. **Update tracking:**
+6. **Update tracking:**
    - Update project.md: move from Active to Done
    - Update claude-progress.txt:
      - Set Type to "none", Source to empty
@@ -274,6 +279,7 @@ Show the user:
 - Resolved: [X items marked done]
 
 ### Documentation
+- system.md updated (What it does)
 - "What We Built" section added
 - Patterns added: [list or "none"]
 - Pitfalls added: [list or "none"]

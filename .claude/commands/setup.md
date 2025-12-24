@@ -180,17 +180,28 @@ Populate all project documentation based on the prompt outputs.
 
 ---
 
-### 1. project.md
+### 1. docs/system.md
+
+| Section | Source |
+|---------|--------|
+| What is [Name] | Requirements Summary → Project Overview |
+| The problem | Requirements Summary → Core Problem |
+| Who it's for | Requirements Summary → Target Users (Primary) |
+| What it does | (leave empty - grows with completed features) |
+
+---
+
+### 2. project.md
 
 | Field | Source |
 |-------|--------|
-| Project Name | Requirements Summary → Project Overview |
+| Project Name | Requirements Summary → Project Overview (extract name) |
 | Active features | (leave empty) |
 | TODO features | Requirements Summary → Functional Requirements |
 
 ---
 
-### 2. docs/architecture.md
+### 3. docs/architecture.md
 
 | Section | Source |
 |---------|--------|
@@ -207,7 +218,7 @@ Populate all project documentation based on the prompt outputs.
 
 ---
 
-### 3. docs/database.md
+### 4. docs/database.md
 
 | Section | Source |
 |---------|--------|
@@ -220,7 +231,7 @@ Populate all project documentation based on the prompt outputs.
 
 ---
 
-### 4. docs/decisions.md
+### 5. docs/decisions.md
 
 Add the ADRs from the prompts:
 
@@ -264,7 +275,7 @@ Add the ADRs from the prompts:
 
 ---
 
-### 5. docs/patterns.md
+### 6. docs/patterns.md
 
 **Update code examples to match chosen language.**
 
@@ -279,7 +290,7 @@ Add the ADRs from the prompts:
 
 ---
 
-### 6. docs/pitfalls.md
+### 7. docs/pitfalls.md
 
 **Update code examples to match chosen language.**
 
@@ -295,7 +306,7 @@ Add the ADRs from the prompts:
 
 ---
 
-### 7. CLAUDE.md
+### 8. CLAUDE.md
 
 | Section | Source |
 |---------|--------|
@@ -310,7 +321,7 @@ Add the ADRs from the prompts:
 
 ---
 
-### 8. .claude/settings.json
+### 9. .claude/settings.json
 
 Generate hooks based on Tech Stack ADR:
 
@@ -392,6 +403,7 @@ Show the user:
 ### Verdict: [APPROVED/APPROVED WITH CONCERNS]
 
 ### Project files updated
+- docs/system.md ✓ (what it is, problem, users)
 - project.md ✓ (name, TODO features)
 - docs/architecture.md ✓ (full system documentation)
 - docs/database.md ✓ (schema, conventions)
