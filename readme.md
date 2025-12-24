@@ -8,6 +8,8 @@ A structured approach to building software with AI assistance.
 
 ```
 ai-development-playbook/
+├── VERSION                  # Current playbook version
+├── CHANGELOG.md             # What's new in each version
 ├── ai-workflow-spec.md      # Philosophy and workflow
 ├── CLAUDE.md                # Always-loaded context
 ├── claude-progress.txt      # Cross-session progress tracking
@@ -146,3 +148,20 @@ Fixed bugs are auto-detected by `/wrap` at session end.
 **Modular rules**: .claude/rules/ directory for organized instructions
 
 **Think modes**: "think hard", "ultrathink" for complex decisions
+
+## Staying up to date
+
+The playbook evolves as we learn. To check for updates:
+
+```
+/playbook-update
+```
+
+This will:
+1. Check if there's a newer version
+2. Show what's changed (in plain language)
+3. Give you instructions on how to apply relevant updates
+
+**Important:** Updates are never automatic. You read the changelog and decide what applies to your project. Your customizations are never overwritten.
+
+You can also check manually: [CHANGELOG.md](https://github.com/mvletter/ai-development-playbook/blob/master/CHANGELOG.md)
