@@ -1,11 +1,13 @@
-# AI Development Workflow Templates
+# AI Development Playbook
 
-Templates for AI-assisted development with Claude Code.
+A structured approach to building software with AI assistance.
+
+**What is this?** A set of instructions and templates that help you and an AI assistant (like Claude) work together to build software - from initial idea to finished product.
 
 ## Structure
 
 ```
-ai-development-setup/
+ai-development-playbook/
 ├── ai-workflow-spec.md      # Philosophy and workflow
 ├── CLAUDE.md                # Always-loaded context
 ├── claude-progress.txt      # Cross-session progress tracking
