@@ -16,6 +16,7 @@ Read these docs:
 - docs/patterns.md (all entries)
 - docs/decisions.md (architecture rules)
 - docs/architecture.md (component constraints)
+  - If split: also read docs/architecture/*.md
 - docs/features/done/ (completed features)
 - .claude/agents/ (current agents)
 

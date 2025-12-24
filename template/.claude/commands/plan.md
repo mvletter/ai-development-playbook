@@ -14,6 +14,7 @@ Feature must have a validated Problem section in docs/features/[name].md (create
 Read these docs:
 - docs/features/$ARGUMENTS.md (the research output - required)
 - docs/architecture.md (system constraints + where code belongs)
+  - If split: also read docs/architecture/components.md for component details
 - docs/patterns.md (existing solutions to reuse)
 - docs/decisions.md (don't contradict settled decisions)
 

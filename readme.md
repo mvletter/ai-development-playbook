@@ -56,7 +56,7 @@ ai-development-playbook/
     │
     └── docs/
         ├── system.md        # What it is, problem, users, capabilities
-        ├── architecture.md
+        ├── architecture.md  # System overview (splits to architecture/ when large)
         ├── database.md
         ├── decisions.md
         ├── inbox.md         # Unprocessed bugs & ideas
@@ -144,7 +144,11 @@ Fixed bugs are auto-detected by `/wrap` at session end.
 **Self-evolving docs**:
 - pitfalls.md: Splits at >50 entries or >15k tokens
 - patterns.md: Splits at >30 patterns or >10k tokens
-- architecture.md: Splits if >1000 tokens (into architecture/ subdirectory)
+- architecture.md: Splits at ~300 lines into architecture/ subdirectory:
+  - `architecture.md` → index (diagram, structure, decisions, links)
+  - `architecture/components.md` → component details, constraints
+  - `architecture/flows.md` → data flows step-by-step
+  - `architecture/integrations.md` → external APIs, boundaries, security
 - Old file becomes index, code references stay the same
 
 ## Advanced features

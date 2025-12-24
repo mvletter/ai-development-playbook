@@ -14,6 +14,7 @@ Analyze code quality and generate a feature spec for improvements.
 
 Read these docs:
 - docs/architecture.md (intended patterns)
+  - If split: also read docs/architecture/components.md
 - docs/patterns.md (established solutions)
 - docs/decisions.md (don't reverse settled decisions)
 

@@ -6,6 +6,7 @@ Validate a problem before designing a solution.
 
 Read these docs first:
 - docs/architecture.md (understand system + where new code belongs)
+  - If split: also read docs/architecture/*.md for component/flow details
 - docs/database.md (understand data model)
 - docs/decisions.md (don't relitigate settled decisions)
 

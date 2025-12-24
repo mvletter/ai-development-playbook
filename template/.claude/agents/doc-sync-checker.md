@@ -12,6 +12,7 @@ Use a subagent with the instructions from .claude/agents/doc-sync-checker.md to 
 ## Instructions
 
 1. Read docs/architecture.md (system structure)
+   - If split: also read docs/architecture/*.md for details
 2. Read docs/database.md (schema)
 3. Compare against actual code:
    - Do documented components exist?
@@ -22,10 +23,10 @@ Use a subagent with the instructions from .claude/agents/doc-sync-checker.md to 
 ## Checks to perform
 
 ### Architecture sync
-- [ ] Components listed in architecture.md exist in code
+- [ ] Components listed in architecture.md (or architecture/components.md) exist in code
 - [ ] Directory structure matches documented structure
-- [ ] Data flows are still accurate
-- [ ] External integrations are documented
+- [ ] Data flows (architecture/flows.md if split) are still accurate
+- [ ] External integrations (architecture/integrations.md if split) are documented
 
 ### Database sync
 - [ ] Tables in database.md match actual schema

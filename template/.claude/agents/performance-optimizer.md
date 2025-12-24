@@ -12,6 +12,7 @@ Use the performance-optimizer agent to analyze [component/flow/file]
 ## Instructions
 
 1. Read docs/architecture.md (understand system structure)
+   - If split: also read docs/architecture/components.md and flows.md
 2. Read docs/patterns.md (check for existing performance patterns)
 3. Read docs/pitfalls.md (check for known performance pitfalls)
 4. Analyze the specified code area

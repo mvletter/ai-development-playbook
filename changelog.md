@@ -1,58 +1,58 @@
 # Changelog
 
-Alle belangrijke wijzigingen aan het AI Development Playbook.
+All notable changes to the AI Development Playbook.
 
-Formaat: [Semantic Versioning](https://semver.org/)
-- **Major** (1.0 → 2.0): Breaking changes, grote herstructurering
-- **Minor** (1.0 → 1.1): Nieuwe features, nieuwe commands
-- **Patch** (1.0.0 → 1.0.1): Bugfixes, kleine verbeteringen
+Format: [Semantic Versioning](https://semver.org/)
+- **Major** (1.0 → 2.0): Breaking changes, major restructuring
+- **Minor** (1.0 → 1.1): New features, new commands
+- **Patch** (1.0.0 → 1.0.1): Bugfixes, small improvements
 
 ---
 
 ## [2.0.0] - 2024-12-24
 
-### Breaking change: template/ folder structuur
+### Breaking change: template/ folder structure
 
-Alle project-bestanden zitten nu in een `template/` folder. Dit voorkomt verwarring tussen playbook-meta (readme, version, changelog) en project-bestanden (CLAUDE.md, docs/, etc.).
+All project files now live in a `template/` folder. This prevents confusion between playbook-meta (readme, version, changelog) and project files (CLAUDE.md, docs/, etc.).
 
-**Wat verandert:**
-- `version` → `template/.playbook-version` (hernoemt om verwarring te voorkomen)
-- Alle project-bestanden verplaatst naar `template/`
-- `/playbook-update` leest nu `.playbook-version` in plaats van `version`
+**What changes:**
+- `version` → `template/.playbook-version` (renamed to avoid confusion)
+- All project files moved to `template/`
+- `/playbook-update` now reads `.playbook-version` instead of `version`
 
-**Wat te doen voor bestaande projecten:**
-1. Hernoem `version` naar `.playbook-version` in je project root
-2. Klaar! Verder niets nodig.
+**For existing projects:**
+1. Rename `version` to `.playbook-version` in your project root
+2. Done! Nothing else needed.
 
-**Wat te doen voor nieuwe projecten:**
-- Kopieer alleen de `template/` folder naar je project
+**For new projects:**
+- Copy only the `template/` folder to your project
 
 ---
 
 ## [1.1.0] - 2024-12-24
 
-### Nieuwe feature: system.md
+### New feature: system.md
 
-Centrale documentatie voor "wat bouwen we eigenlijk?" - een holistische beschrijving van het project die groeit met elke afgeronde feature.
+Central documentation for "what are we building?" - a holistic project description that grows with each completed feature.
 
-**Bevat:**
-- `docs/system.md` template met 4 secties: What is, The problem, Who it's for, What it does
-- `/setup` vult eerste 3 secties automatisch in vanuit Discovery output
-- `/complete` voegt features toe aan "What it does" sectie
+**Contains:**
+- `docs/system.md` template with 4 sections: What is, The problem, Who it's for, What it does
+- `/setup` fills first 3 sections automatically from Discovery output
+- `/complete` adds features to "What it does" section
 
-**Wat te doen:**
-1. Kopieer `docs/system.md` naar je project
-2. Vul in na Discovery fase (of laat /setup het doen)
+**What to do:**
+1. Copy `docs/system.md` to your project
+2. Fill in after Discovery phase (or let /setup do it)
 
 ---
 
 ## [1.0.0] - 2024-12-24
 
-### Eerste release
+### Initial release
 
-Initiele versie van het AI Development Playbook.
+Initial version of the AI Development Playbook.
 
-**Bevat:**
+**Contains:**
 - Setup prompts (discovery, architecture, tech-stack, validator)
 - Workflow commands (/setup, /plan, /implement, /complete, /wrap)
 - Documentation templates (architecture, patterns, pitfalls)
@@ -62,36 +62,36 @@ Initiele versie van het AI Development Playbook.
 - Automatic testing strategy determination
 - Rich idea capture with mini feature specs
 - Session management with progress tracking
-- "No silent skipping" rule - Claude vraagt voordat ie afwijkt van het proces
+- "No silent skipping" rule - Claude asks before deviating from the process
 
 ---
 
-## Template voor toekomstige updates
+## Template for future updates
 
 <!--
 ## [X.Y.Z] - YYYY-MM-DD
 
-### Nieuwe feature: [naam]
-[Beschrijving van wat het doet en waarom]
+### New feature: [name]
+[Description of what it does and why]
 
-**Wat te doen:**
+**What to do:**
 ```
-[Exacte stappen of code om te kopiëren]
-```
-
-### Bugfix: [beschrijving]
-[Wat was het probleem]
-
-**Wat te doen:**
-```
-[Exacte stappen om te fixen]
+[Exact steps or code to copy]
 ```
 
-### Breaking change: [beschrijving]
-[Wat verandert er en waarom]
+### Bugfix: [description]
+[What was the problem]
 
-**Wat te doen:**
+**What to do:**
 ```
-[Migratie stappen]
+[Exact steps to fix]
+```
+
+### Breaking change: [description]
+[What changes and why]
+
+**What to do:**
+```
+[Migration steps]
 ```
 -->

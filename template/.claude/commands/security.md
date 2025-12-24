@@ -6,6 +6,7 @@ Security audit and generate a feature spec for fixes.
 
 Read these docs:
 - docs/architecture.md (system boundaries)
+  - If split: also read docs/architecture/integrations.md for external APIs
 - docs/database.md (data model)
 - docs/pitfalls.md (known security pitfalls)
 

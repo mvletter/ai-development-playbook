@@ -22,16 +22,16 @@ Store as `remote_version` and `changelog`.
 
 If `remote_version` == `local_version`:
 ```
-✓ Je playbook is up-to-date (versie X.Y.Z)
+✓ Your playbook is up-to-date (version X.Y.Z)
 ```
 Done.
 
 If `remote_version` > `local_version`:
 ```
-📢 Playbook update beschikbaar!
+📢 Playbook update available!
 
-Jouw versie: [local_version]
-Nieuwste versie: [remote_version]
+Your version: [local_version]
+Latest version: [remote_version]
 ```
 
 ### Step 4: Show relevant changes
@@ -40,7 +40,7 @@ Parse the changelog.md and show only entries NEWER than `local_version`.
 
 Present in plain language:
 ```
-## Wat is er nieuw sinds jouw versie?
+## What's new since your version?
 
 [Show changelog entries between local_version and remote_version]
 ```
@@ -50,22 +50,22 @@ Present in plain language:
 After showing changes, say:
 
 ```
-De changelog hierboven beschrijft wat er nieuw is en hoe je het kunt toepassen.
+The changelog above describes what's new and how to apply it.
 
-Lees de "Wat te doen" secties en pas toe wat relevant is voor jouw project.
+Read the "What to do" sections and apply what's relevant to your project.
 
-Als je klaar bent, update ik je .playbook-version file zodat je deze melding
-niet opnieuw krijgt.
+When you're done, I'll update your .playbook-version file so you won't see
+this message again.
 
-Klaar met reviewen? (j/n)
+Done reviewing? (y/n)
 ```
 
 If yes:
 1. Update the local `.playbook-version` file to `remote_version`
-2. Confirm: "✓ .playbook-version bijgewerkt naar [remote_version]"
+2. Confirm: "✓ .playbook-version updated to [remote_version]"
 
 If no:
-- "Geen probleem. Run `/playbook-update` wanneer je klaar bent om te reviewen."
+- "No problem. Run `/playbook-update` when you're ready to review."
 
 ## Important
 
@@ -78,8 +78,8 @@ If no:
 
 If GitHub fetch fails:
 ```
-⚠️ Kon de playbook repo niet bereiken. Check je internetverbinding.
+⚠️ Could not reach the playbook repo. Check your internet connection.
 
-Je kunt ook handmatig checken:
+You can also check manually:
 https://github.com/mvletter/ai-development-playbook/blob/master/changelog.md
 ```

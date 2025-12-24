@@ -165,14 +165,15 @@ Use these for complex tasks without filling main context:
 |-------|-------------|
 | `debugger` | Bug analysis, root cause tracing |
 | `performance-optimizer` | Bottleneck identification, optimization |
+| `code-reviewer` | Check code against pitfalls.md and patterns.md |
+| `doc-sync-checker` | Verify docs match code |
 
 **Invoke:**
 ```
-Use a subagent with the instructions from .claude/agents/debugger.md to analyze [error].
-Use a subagent with the instructions from .claude/agents/performance-optimizer.md to check [component].
+Use a subagent with the instructions from .claude/agents/[agent-name].md to [task].
 ```
 
-**Auto-invoked by /complete:** `code-reviewer`, `doc-sync-checker`
+**Auto-invoked by /complete:** `code-reviewer`, `doc-sync-checker`, `performance-optimizer`
 
 ## Session management
 

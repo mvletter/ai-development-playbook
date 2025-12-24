@@ -421,6 +421,8 @@ Show the user:
 ### Agents (ready to use, evolve automatically)
 - .claude/agents/code-reviewer.md
 - .claude/agents/doc-sync-checker.md
+- .claude/agents/debugger.md
+- .claude/agents/performance-optimizer.md
 
 ### Next step
 Run: /research [first feature]

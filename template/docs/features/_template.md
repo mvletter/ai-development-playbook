@@ -1,6 +1,6 @@
 # Feature: [Name]
 
-> Status: Research | Planning | Active | Done
+> Status: Idea | Research | Ready | In Progress | Done
 > Created: [YYYY-MM-DD]
 > Branch: `feature/[name]-`
 

@@ -13,6 +13,7 @@ Analyze codebase for hygiene issues and generate a feature spec for fixes.
 ## Instructions
 
 Read docs/architecture.md to understand intended structure.
+If split: also read docs/architecture/components.md for component constraints.
 
 ## Analysis protocol (15 minutes)
 

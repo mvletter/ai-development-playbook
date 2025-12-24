@@ -241,3 +241,36 @@ project/
 - docs/backend.md - Detailed service layer documentation
 - docs/api-endpoints.md - Complete API reference with examples
 - docs/integrations.md - External API client implementations
+
+---
+
+## Scaling This Document
+
+**When to split:** This file exceeds ~300 lines or becomes hard to navigate.
+
+**How to split:**
+
+1. Create `docs/architecture/` directory
+2. Move sections to focused files:
+   - `architecture/components.md` - Key Components section
+   - `architecture/flows.md` - Data Flow section
+   - `architecture/integrations.md` - External Integrations + System Boundaries
+3. Keep in main file (index):
+   - System Overview (diagram)
+   - Directory Structure
+   - Key Decisions
+   - Links to detail pages
+
+**Index format after split:**
+
+```markdown
+## Detail Pages
+
+| Page | Contents |
+|------|----------|
+| [components.md](architecture/components.md) | Component details, constraints |
+| [flows.md](architecture/flows.md) | Data flows with step-by-step |
+| [integrations.md](architecture/integrations.md) | External APIs, boundaries, security |
+```
+
+**Code references don't change** - commands and agents that read "docs/architecture.md" will find the index, which links to details.

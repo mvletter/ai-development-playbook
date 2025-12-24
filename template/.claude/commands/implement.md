@@ -12,6 +12,7 @@ Read these docs:
 - docs/pitfalls.md (always read before coding)
 - docs/patterns.md (if spec references patterns)
 - docs/architecture.md (if unsure where code belongs)
+  - If split: check docs/architecture/components.md for details
 - claude-progress.txt (current state)
 
 ## Session management
@@ -64,7 +65,7 @@ git checkout -b feature/[name]-[task-id]
 | CLI glue code | Manual testing OK |
 
 **Never skip testing silently.** If you think tests aren't needed for code that looks testable, say:
-> "This is [type of code]. According to the testing strategy, [tests needed / manual OK]. Akkoord?"
+> "This is [type of code]. According to the testing strategy, [tests needed / manual OK]. Agreed?"
 
 **Use the approved test scenarios from the spec:**
 1. Read the "Scenarios" field in the task (links to Test Scenarios section)
