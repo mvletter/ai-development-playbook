@@ -9,6 +9,37 @@ Format: [Semantic Versioning](https://semver.org/)
 
 ---
 
+## [2.1.0] - 2025-12-26
+
+### New feature: Additional workflow agents
+
+Two new agents for common development tasks, plus a phase overview showing when to use each agent.
+
+**New agents:**
+- `research-assistant` - Research external APIs, libraries, and technology choices before coding
+- `migration-planner` - Plan safe bulk operations with dry-run and rollback strategies
+
+**Phase overview in CLAUDE.md:**
+| Phase | Auto | On-demand |
+|-------|------|-----------|
+| /research | - | `research-assistant` |
+| /plan | - | `migration-planner`, `research-assistant` |
+| /implement | - | `debugger` |
+| /complete | `code-reviewer`, `performance-optimizer`, `doc-sync-checker` | - |
+
+**Updated commands:**
+- `/research` now references `research-assistant` for external research
+- `/plan` now references `migration-planner` for migration tasks
+- `/evolve` updated with full agent list
+
+**What to do:**
+1. Copy `.claude/agents/research-assistant.md` to your project
+2. Copy `.claude/agents/migration-planner.md` to your project
+3. Update your `CLAUDE.md` agents section with the new agents and phase table
+4. Update `/research`, `/plan`, `/evolve` commands (or copy fresh from template)
+
+---
+
 ## [2.0.0] - 2024-12-24
 
 ### Breaking change: template/ folder structure

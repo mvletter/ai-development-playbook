@@ -81,6 +81,14 @@ Wait for approval before proceeding to Phase 4.
 
 ### Phase 4: Task breakdown
 
+**For migration tasks** (bulk renames, schema changes, reference updates):
+
+```
+Use a subagent with the instructions from .claude/agents/migration-planner.md to plan [describe the migration]
+```
+
+The migration-planner identifies dependencies, edge cases, and creates a safe rollback strategy.
+
 Each task must:
 - Be completable in one branch
 - Touch specific, listed files

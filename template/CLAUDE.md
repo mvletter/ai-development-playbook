@@ -167,13 +167,27 @@ Use these for complex tasks without filling main context:
 | `performance-optimizer` | Bottleneck identification, optimization |
 | `code-reviewer` | Check code against pitfalls.md and patterns.md |
 | `doc-sync-checker` | Verify docs match code |
+| `migration-planner` | Bulk operations, schema changes, renames |
+| `research-assistant` | New APIs, libraries, technology choices |
 
 **Invoke:**
 ```
-Use a subagent with the instructions from .claude/agents/[agent-name].md to [task].
+Use a subagent with the instructions from .claude/agents/debugger.md to analyze [error].
+Use a subagent with the instructions from .claude/agents/performance-optimizer.md to check [component].
+Use a subagent with the instructions from .claude/agents/migration-planner.md to plan [migration].
+Use a subagent with the instructions from .claude/agents/research-assistant.md to research [topic].
 ```
 
 **Auto-invoked by /complete:** `code-reviewer`, `doc-sync-checker`, `performance-optimizer`
+
+**Agents per workflow phase:**
+
+| Phase | Auto | On-demand |
+|-------|------|-----------|
+| /research | - | `research-assistant` |
+| /plan | - | `migration-planner`, `research-assistant` |
+| /implement | - | `debugger` |
+| /complete | `code-reviewer`, `performance-optimizer`, `doc-sync-checker` | - |
 
 ## Session management
 

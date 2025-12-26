@@ -15,6 +15,13 @@ For complex investigation, use subagents:
 Use a subagent to explore [specific question] and report findings.
 ```
 
+**For external research** (APIs, libraries, technology choices):
+```
+Use a subagent with the instructions from .claude/agents/research-assistant.md to research [topic].
+```
+
+The research-assistant searches package registries, GitHub, docs, and evaluates options against your stack.
+
 ## Protocol
 
 ### Phase 1: Problem validation

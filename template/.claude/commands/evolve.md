@@ -61,10 +61,14 @@ Are there agents with overlapping concerns?
 ## Agent Evolution Report
 
 ### Current agents
-| Agent | Covers | Last relevant update |
-|-------|--------|---------------------|
-| code-reviewer | pitfalls, patterns | [date of newest pitfall] |
-| doc-sync-checker | architecture, database | [date] |
+| Agent | Covers | Auto/Manual |
+|-------|--------|-------------|
+| code-reviewer | pitfalls.md, patterns.md | Auto (/complete) |
+| doc-sync-checker | architecture.md, database.md | Auto (/complete) |
+| performance-optimizer | bottlenecks, N+1, memory | Auto (/complete) |
+| debugger | bugs, root cause tracing | Manual |
+| migration-planner | bulk ops, schema changes, rollback | Manual |
+| research-assistant | APIs, libraries, tech choices | Manual |
 
 ### Suggested improvements
 
